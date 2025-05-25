@@ -60,6 +60,7 @@ function App() {
         <Router>
           <Routes>
             {/* Public Routes */}
+            {alert('username: admin, password: admin123')}
             <Route path="/login" element={<Login />} />
             
             {/* Protected Routes */}
