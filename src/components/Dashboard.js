@@ -44,21 +44,21 @@ const safeToString = (value) => {
 };
 
 // Utility function to calculate average employee tenure
-const calculateAverageTenure = (employees) => {
-  const currentDate = new Date();
-  const validEmployees = employees.filter(emp => emp.joinDate);
-  const totalTenure = validEmployees.reduce((sum, emp) => {
-    const joinDate = new Date(emp.joinDate);
-    const yearsEmployed = (currentDate - joinDate) / (1000 * 60 * 60 * 24 * 365.25);
-    return sum + yearsEmployed;
-  }, 0);
+// const calculateAverageTenure = (employees) => {
+//   const currentDate = new Date();
+//   const validEmployees = employees.filter(emp => emp.joinDate);
+//   const totalTenure = validEmployees.reduce((sum, emp) => {
+//     const joinDate = new Date(emp.joinDate);
+//     const yearsEmployed = (currentDate - joinDate) / (1000 * 60 * 60 * 24 * 365.25);
+//     return sum + yearsEmployed;
+//   }, 0);
 
-  const averageTenure = validEmployees.length > 0 
-    ? totalTenure / validEmployees.length 
-    : 0;
+//   const averageTenure = validEmployees.length > 0 
+//     ? totalTenure / validEmployees.length 
+//     : 0;
 
-  return Number(averageTenure.toFixed(2));
-};
+//   return Number(averageTenure.toFixed(2));
+// };
 
 // Utility function to calculate salary metrics
 const calculateSalaryMetrics = (employees) => {

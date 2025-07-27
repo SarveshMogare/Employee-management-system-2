@@ -2,8 +2,13 @@
   "name": "employee-management-system",
   "version": "1.0.0",
   "description": "Employee Management System using MERN stack",
+  "main": "server/server.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -14,11 +19,20 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "recharts": "^2.15.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
   },
   "browserslist": {
     "production": [
